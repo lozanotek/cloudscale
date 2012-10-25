@@ -6,5 +6,9 @@ namespace CloudScale.Controllers {
 
 			return View();
 		}
+
+		public ActionResult Blitz() {
+			return Content("42");
+		}
 	}
 }
