@@ -13,12 +13,6 @@ namespace CloudScale {
 			routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 			
 			routes.MapRoute(
-				"Blitzio", // Route name
-				"mu-d42f6215-0b436c7f-12a37bc2-a4b054ef", // URL with parameters
-				new { controller = "Home", action = "Blitz" } // Parameter defaults
-			);
- 
-			routes.MapRoute(
 				"Default", // Route name
 				"{controller}/{action}/{id}", // URL with parameters
 				new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
@@ -28,9 +22,6 @@ namespace CloudScale {
 
 		protected void Application_Start() {
 			AreaRegistration.RegisterAllAreas();
-
-			// Use LocalDB for Entity Framework by default
-			Database.DefaultConnectionFactory = new SqlConnectionFactory(@"Data Source=(localdb)\v11.0; Integrated Security=True; MultipleActiveResultSets=True");
 
 			RegisterGlobalFilters(GlobalFilters.Filters);
 			RegisterRoutes(RouteTable.Routes);
