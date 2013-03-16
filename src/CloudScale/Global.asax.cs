@@ -30,14 +30,15 @@ namespace CloudScale {
 		public static void RegisterGlobalFilters(GlobalFilterCollection filters) {
 			filters.Add(new HandleErrorAttribute());
 
-			var filterCache = new OutputCacheAttribute {
-				Location =
-					System.Web.UI.OutputCacheLocation.Any,
-				Duration = 28800,
-				VaryByParam = "none"
-			};
+            //var filterCache = new OutputCacheAttribute {
+            //    Location =
+            //        System.Web.UI.OutputCacheLocation.Any,
+            //    //8hrs
+            //    Duration = 28800,
+            //    VaryByParam = "none"
+            //};
 
-			filters.Add(filterCache);
+            //filters.Add(filterCache);
 		}
 	}
 }
